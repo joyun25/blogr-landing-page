@@ -22,6 +22,7 @@ Users should be able to:
 ### Screenshot
 
 ![](https://i.imgur.com/TrYCkDC.png)
+![](https://i.imgur.com/QYwriMX.png)
 
 ### Links
 
@@ -34,5 +35,4 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Scss
-- Font Awesome
 - Javascript

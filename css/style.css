@@ -57,7 +57,6 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
-  outline: 1px solid red;
 }
 
 body {
@@ -265,6 +264,19 @@ img {
   color: #ff3d54;
 }
 
+@media (max-width: 900px) {
+  .btn-signUp {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    color: #fff;
+  }
+  .btn-signUp:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    color: #fff;
+  }
+}
+
 header,
 footer {
   font-family: "Ubuntu", sans-serif;
@@ -312,8 +324,28 @@ header h3 {
   }
 }
 
-nav > div {
+.menu {
   width: calc(100% - 160px);
+}
+
+@media (max-width: 900px) {
+  .menu {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    background: white;
+    color: #000;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  .menu > ul {
+    border-bottom: 1px solid #4b5862;
+  }
 }
 
 .submenuTitle {
@@ -321,20 +353,26 @@ nav > div {
   padding-bottom: 12px;
 }
 
-.submenuTitle:hover span {
+.submenuTitle span:hover {
   text-decoration: underline;
 }
 
-.img-arrow {
-  width: 10px;
-  height: 7px;
-  margin-left: 5px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+@media (max-width: 900px) {
+  .submenuTitle span:hover {
+    text-decoration: none;
+    color: #4b5862;
+  }
 }
 
 .submenuTitle-clicked span {
   text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .submenuTitle-clicked span {
+    text-decoration: none;
+    color: #4b5862;
+  }
 }
 
 .submenuTitle-clicked .img-arrow {
@@ -352,14 +390,37 @@ nav > div {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 900px) {
+  .submenu {
+    position: static;
+    background: #f1f1f1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .submenu a {
   width: 150px;
   color: #000;
   padding: 20px;
 }
 
+@media (max-width: 900px) {
+  .submenu a {
+    width: 100%;
+    color: #4b5862;
+    padding: 10px;
+  }
+}
+
 .submenu a:hover {
   font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .submenu a:hover {
+    font-weight: normal;
+  }
 }
 
 .feature1,
@@ -445,6 +506,14 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.img-arrow {
+  width: 10px;
+  height: 7px;
+  margin-left: 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .img-editor {
   position: absolute;
   left: 115%;
@@ -489,7 +558,8 @@ footer a:hover {
   }
 }
 
-.img-openMenu {
+.img-openMenu,
+.img-closeMenu {
   width: 32px;
 }
 
@@ -506,6 +576,18 @@ footer a:hover {
 @media (max-width: 900px) {
   .w-pad-100 {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .p-pad-2 {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pt-pad-2 {
+    padding-top: 20px;
   }
 }
 
@@ -528,6 +610,12 @@ footer a:hover {
 }
 
 @media (max-width: 900px) {
+  .pb-pad-2 {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
   .pb-pad-3 {
     padding-bottom: 30px;
   }
@@ -546,8 +634,26 @@ footer a:hover {
 }
 
 @media (max-width: 900px) {
+  .mb-pad-1 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mr-pad-0 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
   .d-pad-none {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .d-pad-block {
+    display: block;
   }
 }
 
@@ -557,6 +663,14 @@ footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .justify-pad-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -571,18 +685,6 @@ footer a:hover {
 @media (max-width: 900px) {
   .text-pad-center {
     text-align: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .pad-menu {
-    position: absolute;
-    background: white;
-    color: #000;
-    display: block;
-  }
-  .pad-menu ul {
-    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -31,17 +31,10 @@ $ubuntu: 'Ubuntu', sans-serif; // Weights: 400, 500, 700
     }
 }
 
-// @mixin mobile {
-//     @media (max-width: 500px) {
-//         @content;
-//     }
-// }
-
 // Layout
 * {
     box-sizing: border-box;
     font-size: 16px;
-    outline: 1px solid red;
 }
 
 body {
@@ -207,6 +200,17 @@ img {
     }
 }
 
+.btn-signUp {
+    @include pad {
+        background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+        color: #fff;
+        &:hover {
+            background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+            color: #fff;
+        }
+    }
+}
+
 // My CSS
 header,
 footer {
@@ -242,30 +246,45 @@ header {
     }
 }
 
-nav > div {
+.menu {
     width: calc(100% - 160px);
+    @include pad {
+        font-family: $overpass;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        background: $white;
+        color: #000;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, .3);
+        > ul {
+            border-bottom: 1px solid $veryDarkGrayishBlue;
+        }
+    }
 }
 
 .submenuTitle {
     padding-top: 12px;
     padding-bottom: 12px;
-    &:hover {
-        span{
-            text-decoration: underline;
+    span:hover {
+        text-decoration: underline;
+        @include pad {
+            text-decoration: none;
+            color: $veryDarkGrayishBlue;
         }
     }
-}
-
-.img-arrow {
-    width: 10px;
-    height: 7px;
-    margin-left: 5px;
-    transition: all .5s;
 }
 
 .submenuTitle-clicked {
     span{
         text-decoration: underline;
+        @include pad {
+            text-decoration: none;
+            color: $veryDarkGrayishBlue;
+        }
     }
 
     .img-arrow {
@@ -276,16 +295,29 @@ nav > div {
 .submenu {
     position: absolute;
     top: 100%;
-    left: -20px;;
+    left: -20px;
     background: $white;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    @include pad {
+        position: static;
+        background: #f1f1f1;
+        box-shadow: none;
+    }
     a {
         width: 150px;
         color: #000;
         padding: 20px;
+        @include pad {
+            width: 100%;
+            color: $veryDarkGrayishBlue;
+            padding: 10px;
+        }
         &:hover {
             font-weight: 700;
+            @include pad {
+                font-weight: normal;
+            }
         }
     }
 }
@@ -359,6 +391,13 @@ footer {
 }
 
 // Images
+.img-arrow {
+    width: 10px;
+    height: 7px;
+    margin-left: 5px;
+    transition: all .5s;
+}
+
 .img-editor {
     position: absolute;
     left: 115%;
@@ -393,7 +432,8 @@ footer {
     }
 }
 
-.img-openMenu {
+.img-openMenu,
+.img-closeMenu {
     width: 32px;
 }
 
@@ -408,6 +448,18 @@ footer {
 .w-pad-100 {
     @include pad{
         width: 100%;
+    }
+}
+
+.p-pad-2 {
+    @include pad {
+        padding: 20px;
+    }
+}
+
+.pt-pad-2 {
+    @include pad {
+        padding-top: 20px;
     }
 }
 
@@ -429,6 +481,12 @@ footer {
     }
 }
 
+.pb-pad-2 {
+    @include pad {
+        padding-bottom: 20px;
+    }
+}
+
 .pb-pad-3 {
     @include pad {
         padding-bottom: 30px;
@@ -447,15 +505,39 @@ footer {
     }
 }
 
+.mb-pad-1 {
+    @include pad {
+        margin-bottom: 10px;
+    }
+}
+
+.mr-pad-0 {
+    @include pad {
+        margin: 0;
+    }
+}
+
 .d-pad-none {
     @include pad {
         display: none;
     }
 }
 
+.d-pad-block {
+    @include pad {
+        display: block;
+    }
+}
+
 .f-pad-column {
     @include pad {
         flex-direction: column;
+    }
+}
+
+.justify-pad-center {
+    @include pad {
+        justify-content: center;
     }
 }
 
@@ -468,18 +550,5 @@ footer {
 .text-pad-center {
     @include pad {
         text-align: center;
-    }
-}
-
-.pad-menu {
-    @include pad {
-        // display: none;
-        position: absolute;
-        background: $white;
-        color: #000;
-        display: block;
-        ul {
-            display: block;
-        }
     }
 }
