@@ -9,10 +9,16 @@ submenuTitles.forEach((submenuTitle, index) => {
         if (submenuTitle.classList.contains('submenuTitle-clicked')) {
             submenuTitle.classList.remove('submenuTitle-clicked');
         }else{
+            submenuTitles.forEach((submenuTitle) => {
+                submenuTitle.classList.remove('submenuTitle-clicked');
+            });
             submenuTitle.classList.add('submenuTitle-clicked');
         }
 
         if (submenus[index].classList.contains('d-none')) {
+            submenus.forEach((submenu) => {
+                submenu.classList.add('d-none');
+            });
             submenus[index].classList.remove('d-none');
         }else{
             submenus[index].classList.add('d-none');
