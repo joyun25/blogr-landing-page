@@ -151,6 +151,10 @@ img {
   padding-top: 60px;
 }
 
+.pt-9 {
+  padding-top: 90px;
+}
+
 .pt-12 {
   padding-top: 120px;
 }
@@ -169,6 +173,10 @@ img {
 
 .pb-6 {
   padding-bottom: 60px;
+}
+
+.pb-9 {
+  padding-bottom: 90px;
 }
 
 .pb-10 {
@@ -618,6 +626,12 @@ footer a:hover {
 @media (max-width: 900px) {
   .pb-pad-3 {
     padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pb-pad-6 {
+    padding-bottom: 60px;
   }
 }
 

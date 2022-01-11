@@ -118,6 +118,9 @@ img {
 .pt-6 {
     padding-top: 60px;
 }
+.pt-9{
+    padding-top: 90px;
+}
 .pt-12 {
     padding-top: 120px;
 }
@@ -133,6 +136,9 @@ img {
 }
 .pb-6 {
     padding-bottom: 60px;
+}
+.pb-9 {
+    padding-bottom: 90px;
 }
 .pb-10 {
     padding-bottom: 100px;
@@ -490,6 +496,12 @@ footer {
 .pb-pad-3 {
     @include pad {
         padding-bottom: 30px;
+    }
+}
+
+.pb-pad-6 {
+    @include pad {
+        padding-bottom: 60px;
     }
 }
 
