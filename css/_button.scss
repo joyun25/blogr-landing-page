@@ -1,0 +1,36 @@
+.btn {
+    border-radius: 20px;
+    width: 130px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+}
+.btn-white {
+    background: $white;
+    color: $lightRed;
+    &:hover {
+        background: rgba(255, 255, 255, .3);
+        color: $white;
+    }
+}
+.btn-outline-white {
+    background: transparent;
+    color: $white;
+    border: 1px solid $white;
+    &:hover {
+        background: $white;
+        color: $lightRed;
+    }
+}
+
+.btn-signUp {
+    @include pad {
+        background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+        color: #fff;
+        &:hover {
+            background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+            color: #fff;
+        }
+    }
+}

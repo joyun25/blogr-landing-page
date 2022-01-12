@@ -1,0 +1,45 @@
+.img-arrow {
+    width: 10px;
+    height: 7px;
+    margin-left: 5px;
+    transition: all .5s;
+}
+
+.img-editor {
+    position: absolute;
+    left: 115%;
+    top: -48%;
+    width: 180%;
+    @include pad {
+        display: none;
+    }
+}
+
+.img-laptop {
+    position: absolute;
+    right: 109%;
+    top: -40%;
+    width: 190%;
+    @include pad {
+        display: none;
+    }
+}
+
+.img-phones {
+    position: absolute;
+    right: 110%;
+    top: -105%;
+    width: 115%;
+    @include pad {
+        right: 50%;
+        top: 100px;
+        transform: translate(50%, -100%);
+        max-width: 375px;
+        width: 100%;
+    }
+}
+
+.img-openMenu,
+.img-closeMenu {
+    width: 32px;
+}

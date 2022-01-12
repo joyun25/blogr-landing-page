@@ -1,0 +1,52 @@
+.d-none {
+    display: none;
+}
+.d-flex{
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.align-center {
+    align-items: center;
+}
+
+.wrap {
+    .pad-only {
+        display: none;
+        @include pad {
+            display: block;
+        }
+    }
+    .d-pad-none {
+        @include pad {
+            display: none;
+        }
+    }
+    .d-pad-block {
+        @include pad {
+            display: block;
+        }
+    }
+    .f-pad-column {
+        @include pad {
+            flex-direction: column;
+        }
+    }
+    .justify-pad-center {
+        @include pad {
+            justify-content: center;
+        }
+    }
+    .align-pad-center {
+        @include pad {
+            align-items: center;
+        }
+    }
+}
