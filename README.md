@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/joyun25/blogr-landing-page-main)
-- Live Site URL: [Github Page](https://joyun25.github.io/blogr-landing-page-main/)
+- Solution URL: [Github](https://github.com/joyun25/blogr-landing-page)
+- Live Site URL: [Github Page](https://joyun25.github.io/blogr-landing-page/)
 
 ### Built with
 
